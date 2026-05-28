@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+   {% if title %}
+   Haynes' {{ title }}
+
+   {% else %}
+   Haynes' Website
+   {% endif %}
+{% endblock %} 
+
+{% block content %} 
+  <h1>Welcome to the About Page</h1>
+  <h2>
+    <p>Learn more about our company and its mission.</p>
+    <p>This is the about page.</p>
+    <p>Learn more about our company and its mission.</p>
+    <p>Feel free to contact us with any questions or feedback.</p>
+    <p>Thank you for visiting our site!</p>
+    <p>Have a great day!</p>
+    <p>See you next time!</p>
+  </h2>
+
+{% endblock %}

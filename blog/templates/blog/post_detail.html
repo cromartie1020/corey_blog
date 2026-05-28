@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% load static %} {% block title %} {% if title %}
+Haynes' {{ title }} {% else %} Haynes' Blog {% endif %} {% endblock %} 
+{% block content%}
+
+<article class="media content-section">
+  <img
+    src="{{ object.author.profile.image.url }}"
+    alt=""
+    class="rounded-circle article-img"
+  />
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="{% url 'profile' %}">{{ object.author }}</a>
+      <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+    </div>
+    <h2 class="article-title">{{ object.title }}</h2>
+    <p class="article-content">{{ object.content }}</p>
+  </div>
+</article>
+
+{% endblock %}

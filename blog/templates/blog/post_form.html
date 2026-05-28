@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>Create</title>
+{% endblock %}
+
+{% block content %}
+   
+   
+   <div class='content-section'>
+     <h1>Create Post</h1> 
+
+    <form action="" method='POST'>
+        {% csrf_token %}   
+        {{ form|crispy }}
+        
+        <div class='form-group'>
+            <button class = 'btn btn-outline-info' type='submit'>
+                Create
+
+            </button>
+        </div>
+    </form>
+    
+   </div>
+   
+{% endblock %}
