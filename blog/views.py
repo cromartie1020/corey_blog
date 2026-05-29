@@ -30,7 +30,8 @@ class PostListView(ListView):  # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
     ordering = ['-date_posted']
     login_url = '/login/'
-    
+    paginate_by = 2
+
 class PostDetailView(LoginRequiredMixin, DetailView):
     model = Post    
     login_url = '/login/'
